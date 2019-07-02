@@ -136,8 +136,8 @@ $Comp
 L Device:R R?
 U 1 1 5D1C5687
 P 2500 5400
-F 0 "R?" V 2385 5400 50  0000 C CNN
-F 1 "200" V 2384 5400 50  0001 C CNN
+F 0 "R?" V 2500 5350 50  0000 C CNN
+F 1 "200" V 2400 5400 50  0000 C CNN
 F 2 "" V 2430 5400 50  0001 C CNN
 F 3 "~" H 2500 5400 50  0001 C CNN
 	1    2500 5400
@@ -147,8 +147,8 @@ $Comp
 L Device:R R?
 U 1 1 5D1C5974
 P 2500 5500
-F 0 "R?" V 2385 5500 50  0000 C CNN
-F 1 "200" V 2384 5500 50  0001 C CNN
+F 0 "R?" V 2500 5500 50  0000 C CNN
+F 1 "200" V 2550 5700 50  0000 C CNN
 F 2 "" V 2430 5500 50  0001 C CNN
 F 3 "~" H 2500 5500 50  0001 C CNN
 	1    2500 5500
@@ -158,8 +158,8 @@ $Comp
 L Device:R R?
 U 1 1 5D1C5AE5
 P 2500 5600
-F 0 "R?" V 2385 5600 50  0000 C CNN
-F 1 "200" V 2384 5600 50  0001 C CNN
+F 0 "R?" V 2500 5600 50  0000 C CNN
+F 1 "200" V 2600 5600 50  0000 C CNN
 F 2 "" V 2430 5600 50  0001 C CNN
 F 3 "~" H 2500 5600 50  0001 C CNN
 	1    2500 5600
@@ -210,21 +210,10 @@ Wire Wire Line
 	2350 5500 2050 5500
 Wire Wire Line
 	2350 5600 2050 5600
-Text Label 1750 650  0    50   ~ 0
+Text Label 6500 750  0    50   ~ 0
 Mbee
 Wire Wire Line
 	3500 3900 3500 3600
-$Comp
-L Device:Buzzer BZ?
-U 1 1 5D163413
-P 2000 6100
-F 0 "BZ?" H 2005 5775 50  0000 C CNN
-F 1 "Buzzer" H 2005 5866 50  0000 C CNN
-F 2 "" V 1975 6200 50  0001 C CNN
-F 3 "~" V 1975 6200 50  0001 C CNN
-	1    2000 6100
-	1    0    0    -1  
-$EndComp
 $Comp
 L power:+24V #PWR?
 U 1 1 5D16453B
@@ -236,8 +225,6 @@ F 3 "" H 1900 6000 50  0001 C CNN
 	1    1900 6000
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	1900 6450 1900 6200
 Wire Wire Line
 	3900 4900 4300 4900
 $Comp
@@ -647,8 +634,6 @@ Wire Wire Line
 	1700 1900 1800 1900
 Wire Wire Line
 	1800 1700 1050 1700
-Wire Wire Line
-	1050 1700 1050 3950
 $Comp
 L Interface_LineDriver:DS89C21 U?
 U 1 1 5D6D98A5
@@ -662,10 +647,10 @@ F 3 "http://www.ti.com/lit/ds/symlink/ds89c21.pdf" H 3250 2450 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	2650 1900 3050 1900
-Text GLabel 2550 2450 0    50   Input ~ 0
+Text GLabel 2600 2450 3    50   Input ~ 0
 GND
 Wire Wire Line
-	2550 2450 2650 2450
+	2600 2450 2650 2450
 Text Label 1800 1100 2    50   ~ 0
 RX
 Text Label 1650 1700 0    50   ~ 0
@@ -734,8 +719,6 @@ Wire Wire Line
 	2650 1100 3450 1100
 Wire Wire Line
 	3450 1100 3450 2050
-Text Label 2150 6100 0    50   ~ 0
-BUZ_connector
 Wire Wire Line
 	5200 5700 5200 5600
 Wire Wire Line
@@ -1265,7 +1248,7 @@ L Connector_Generic:Conn_02x04_Odd_Even J?
 U 1 1 5DA3E1B3
 P 9050 5700
 F 0 "J?" H 9100 6017 50  0000 C CNN
-F 1 "Conn_02x04_Odd_Even" H 9100 5926 50  0000 C CNN
+F 1 "Conn_02x04_Molex" H 9100 5926 50  0000 C CNN
 F 2 "" H 9050 5700 50  0001 C CNN
 F 3 "~" H 9050 5700 50  0001 C CNN
 	1    9050 5700
@@ -1304,8 +1287,8 @@ Wire Wire Line
 	9450 5650 9450 5600
 Wire Wire Line
 	8750 5700 8850 5700
-Text Notes 8550 6050 0    50   ~ 0
-To Motors_MOLEX_8_pin\n
+Text Notes 8650 6300 0    50   ~ 0
+To Motors_Mini-Fit_\n0039296088\nfor \n39012080
 Wire Wire Line
 	10400 2750 10600 2750
 Text GLabel 10900 1000 3    50   Input ~ 0
@@ -1321,7 +1304,7 @@ L Connector_Generic:Conn_01x06 J?
 U 1 1 5DC1E385
 P 10600 700
 F 0 "J?" V 10564 312 50  0000 R CNN
-F 1 "B6B-EH-A" V 10473 312 50  0000 R CNN
+F 1 "B6B-EH-A" V 10700 500 50  0000 R CNN
 F 2 "" H 10600 700 50  0001 C CNN
 F 3 "~" H 10600 700 50  0001 C CNN
 	1    10600 700 
@@ -1394,21 +1377,17 @@ $Comp
 L Connector_Generic:Conn_01x03 J?
 U 1 1 5E2F82BE
 P 2750 6800
-F 0 "J?" V 2622 6980 50  0000 L CNN
-F 1 "Conn_01x03" V 2713 6980 50  0000 L CNN
+F 0 "J?" V 2750 7050 50  0000 L CNN
+F 1 "2.54 pins" V 2950 6650 50  0000 L CNN
 F 2 "" H 2750 6800 50  0001 C CNN
 F 3 "~" H 2750 6800 50  0001 C CNN
 	1    2750 6800
 	0    1    1    0   
 $EndComp
-Text Notes 2650 6950 0    50   ~ 0
-To_PC\n
 Text GLabel 2650 6550 1    50   Input ~ 0
 GND
 Wire Wire Line
 	2650 6600 2650 6550
-Text Notes 2550 7050 0    50   ~ 0
-SIMPLE PINS\n
 Wire Wire Line
 	10850 4950 10850 5250
 Wire Wire Line
@@ -1423,14 +1402,14 @@ $Comp
 L Connector_Generic:Conn_01x06 J?
 U 1 1 5DC1CAB0
 P 11100 4750
-F 0 "J?" H 11018 4225 50  0000 C CNN
-F 1 "Conn_01x06" H 11018 4316 50  0000 C CNN
+F 0 "J?" H 11050 4200 50  0000 C CNN
+F 1 "B6B-EH-A" V 11150 5200 50  0000 C CNN
 F 2 "" H 11100 4750 50  0001 C CNN
 F 3 "~" H 11100 4750 50  0001 C CNN
 	1    11100 4750
 	1    0    0    -1  
 $EndComp
-Text Notes 11150 4450 2    50   ~ 0
+Text Notes 11100 4500 1    50   ~ 0
 Encoder_1
 Wire Wire Line
 	8950 4350 8850 4350
@@ -1491,21 +1470,10 @@ Wire Wire Line
 	10900 4950 10850 4950
 Text GLabel 10850 5250 3    50   Input ~ 0
 +5V
-Text Notes 10850 600  2    50   ~ 0
+Text Notes 10750 600  2    50   ~ 0
 Encoder_2
 Wire Wire Line
 	2950 3200 2950 3350
-$Comp
-L Connector_Generic:Conn_01x07 J?
-U 1 1 5E68A70C
-P 2100 2750
-F 0 "J?" V 2064 2362 50  0000 R CNN
-F 1 "B7B-EH-A" V 1973 2362 50  0000 R CNN
-F 2 "" H 2100 2750 50  0001 C CNN
-F 3 "~" H 2100 2750 50  0001 C CNN
-	1    2100 2750
-	0    -1   -1   0   
-$EndComp
 Wire Wire Line
 	3550 2900 3550 3500
 Wire Wire Line
@@ -1538,15 +1506,13 @@ Text Label 1800 3000 2    50   ~ 0
 RX
 Text Label 2000 3000 2    50   ~ 0
 TX
-Text GLabel 2400 3050 3    50   Input ~ 0
+Text GLabel 1900 2350 1    50   Input ~ 0
 GND
 Wire Wire Line
-	2400 3050 2400 2950
+	1900 2350 1900 2450
 Wire Wire Line
-	2200 3300 2200 2950
-Wire Wire Line
-	2300 3050 2300 2950
-Text GLabel 2300 3050 3    50   Input ~ 0
+	2200 3300 2200 3000
+Text GLabel 1450 2250 0    50   Input ~ 0
 +5V
 Text Notes 2200 3250 1    50   ~ 0
 CHECK
@@ -1575,4 +1541,90 @@ Wire Wire Line
 	1450 5100 1450 6550
 Wire Wire Line
 	1450 7050 1450 6850
+Text Notes 1600 3200 1    50   ~ 0
+76829-0110 \nfor \n1700010110
+Text Label 3050 1900 0    50   ~ 0
+Debug_TX
+Text Label 3450 1900 0    50   ~ 0
+Debug_RX
+Wire Wire Line
+	1900 6050 1900 6000
+Wire Wire Line
+	1900 6150 1900 6450
+$Comp
+L Connector_Generic:Conn_01x03 J?
+U 1 1 5D2AA180
+P 2150 6150
+F 0 "J?" H 2230 6192 50  0000 L CNN
+F 1 "B3B-EH-A" H 2230 6101 50  0000 L CNN
+F 2 "" H 2150 6150 50  0001 C CNN
+F 3 "~" H 2150 6150 50  0001 C CNN
+	1    2150 6150
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1900 6050 1950 6050
+Wire Wire Line
+	1900 6150 1950 6150
+$Comp
+L Connector_Generic:Conn_02x05_Counter_Clockwise J?
+U 1 1 5D414810
+P 2000 2750
+F 0 "J?" V 2004 3030 50  0000 L CNN
+F 1 "Molex2x5pin" V 2095 3030 50  0000 L CNN
+F 2 "" H 2000 2750 50  0001 C CNN
+F 3 "~" H 2000 2750 50  0001 C CNN
+	1    2000 2750
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	1050 1700 1050 3950
+Text Notes 550  7750 0    50   ~ 0
+MLX 23A\n50841010\nfor\n367570141
+Wire Wire Line
+	1800 2450 1800 2250
+$Comp
+L Device:R R?
+U 1 1 5D2B53B1
+P 1650 2250
+F 0 "R?" V 1765 2250 50  0000 C CNN
+F 1 "100" V 1534 2250 50  0000 C CNN
+F 2 "" V 1580 2250 50  0001 C CNN
+F 3 "~" H 1650 2250 50  0001 C CNN
+	1    1650 2250
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	1500 2250 1450 2250
+Connection ~ 2200 3000
+Wire Wire Line
+	2200 3000 2200 2950
+$Comp
+L Device:R R?
+U 1 1 5D361665
+P 2400 2700
+F 0 "R?" V 2515 2700 50  0000 C CNN
+F 1 "50" V 2284 2700 50  0000 C CNN
+F 2 "" V 2330 2700 50  0001 C CNN
+F 3 "~" H 2400 2700 50  0001 C CNN
+	1    2400 2700
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	2200 3000 2400 3000
+Wire Wire Line
+	2400 2850 2400 3000
+Wire Wire Line
+	2400 2550 2400 2100
+Wire Wire Line
+	2400 2100 1800 2100
+Wire Wire Line
+	1800 2100 1800 2250
+Connection ~ 1800 2250
+Text Notes 2650 6950 0    50   ~ 0
+PLHD
+Text Notes 11200 5400 1    50   ~ 0
+EHR-6
+Text Notes 11200 900  1    50   ~ 0
+EHR-6
 $EndSCHEMATC
