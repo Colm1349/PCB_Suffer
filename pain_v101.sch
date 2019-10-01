@@ -1433,7 +1433,7 @@ F 3 "http://www.ti.com/lit/ds/symlink/ds89c21.pdf" H 3550 2450 50  0001 C CNN
 	1    3550 2450
 	0    1    1    0   
 $EndComp
-Text Notes 4650 4750 0    50   ~ 0
+Text Notes 4700 4750 0    50   ~ 0
 WIRE/WIRELESS LED
 Wire Wire Line
 	4200 2450 4600 2450
